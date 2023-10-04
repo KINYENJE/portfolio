@@ -32,14 +32,14 @@ const HeroSection = () => {
                      />
                                
                 </h1>
-                <p classname = 'text-[#ADB7BE] text-base text-lg  lg:text-xl'>
+                <p className = 'text-[#ADB7BE] text-base text-lg  lg:text-xl'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 </p>
                 <div className='mt-6 mb-3'>
-                    <button className='px-6 w-full sm:w-fit py-3 rounded-full mr-4 bg-gradient-to-br from-[#93A5CF] to-[#E4EfE9]  hover:bg-slate-200 text-black '>
+                    <button className='px-6 w-full sm:w-fit py-3 rounded-full mr-4 bg-gradient-to-br from-[#93A5CF] via-[#E4EfE9] to-[#93A5CF]  hover:bg-slate-200 text-black  font-medium'>
                         Hire Me
                     </button>
-                    <button className='px-[2px] py-[2px] w-full sm:w-fit rounded-full bg-gradient-to-br from-[#93A5CF] to-[#E4EfE9] hover:bg-slate-800 text-white mt-3 '>
+                    <button className='px-[2px] py-[2px] w-full sm:w-fit rounded-full bg-gradient-to-br from-[#93A5CF] via-[#E4EfE9] to-[#93A5CF] hover:bg-slate-800 text-white mt-3 '>
                         <span className='block bg-[#121212] rounded-full px-5 py-2'>
                         Download CV
                         </span>
