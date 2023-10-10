@@ -4,6 +4,45 @@ import React, {useState, useTransition} from 'react'
 import Image from 'next/image'
 import TabButton from './TabButton'
 
+const TAB_DATA = [
+    {
+        title: 'Skills',
+        id: 'skills',
+        content: (
+            <ul className='list-disc pl-4'>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Javascript</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>MongoDB</li>
+                <li>Tailwind CSS</li>
+            </ul>
+        )
+    },
+    {
+        tilte: 'Education',
+        id: 'Education',
+        content: (
+            <ul className='list-disc pl-4'>
+                <li>Jomo Kenyatta University of Agriculture and Technology</li>
+                <li>#100DEVS Bootcamp</li>
+            </ul>
+        )
+    },
+    {
+        tilte: 'Experience',
+        id: 'Experience',
+        content: (
+            <ul className='list-disc pl-4'>
+                <li>Freelance Web Developer</li>
+                <li>Software Engineer at Aquaprime Water Limited</li>
+                <li>Software Engineer at JKUAT </li>
+            </ul>
+        )
+    }
+]
+
 const AboutSection = () => {
     const [tab, setTab] = useState('skills')
 
@@ -21,7 +60,7 @@ const AboutSection = () => {
         <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
 
             <Image src='/images/passport.png' alt= 'about image' width={500} height={500}  />
-           <div>
+           <div className='mt-8 md:mt-0 text-left flex flex-col h-full'>
            <h2 className='text-4xl font-bold text-white mb-4 '>
             About Me
             </h2>
@@ -41,6 +80,12 @@ const AboutSection = () => {
                 </TabButton>
                 
             </div>
+
+            <div className='mt-8'>
+                {isPending ? 'Loading...' : TAB_DATA.find((tabData) => tabData.id === tab).content}
+
+            </div>
+
            </div>
         </div>
     </section>
