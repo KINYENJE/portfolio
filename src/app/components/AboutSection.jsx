@@ -21,7 +21,7 @@ const TAB_DATA = [
         )
     },
     {
-        tilte: 'Education',
+        title: 'Education',
         id: 'Education',
         content: (
             <ul className='list-disc pl-4'>
@@ -31,7 +31,7 @@ const TAB_DATA = [
         )
     },
     {
-        tilte: 'Experience',
+        title: 'Experience',
         id: 'Experience',
         content: (
             <ul className='list-disc pl-4'>
