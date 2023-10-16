@@ -8,7 +8,7 @@ const projectData = [
         description: "This is an ecommerce website",
         image: '/images/projects/ecommerce.png',
         tag: ["All", "Next.js", "Tailwind CSS"],
-        gitUrl: '/',
+        gitUrl: 'https://github.com/KINYENJE/next-js-ecommerce',
         previewUrl: 'https://kinyenjemart.netlify.app/',
     },
     {
@@ -17,7 +17,7 @@ const projectData = [
         description: "This is a gym website",
         image: '/images/projects/gym.png',
         tag: ["All"],
-        gitUrl: '/',
+        gitUrl: 'https://github.com/KINYENJE/gym-react-app',
         previewUrl: 'https://kinyenje-gym-site.netlify.app/',
     },
     {
@@ -26,7 +26,7 @@ const projectData = [
         description: "This is a Nike shoe clone website",
         image: '/images/projects/neki.png',
         tag: ["All", "Vite", "Tailwind CSS"],
-        gitUrl: '/',
+        gitUrl: 'https://github.com/KINYENJE/Nike-tailwind-css',
         previewUrl: 'https://kinyenje-neki.netlify.app/',
     },
     {
@@ -35,7 +35,7 @@ const projectData = [
         description: "This is a Chat GPT Summarizer for articles",
         image: '/images/projects/summarizer.png',
         tag: ["All", "React", "Tailwind CSS"],
-        gitUrl: '/',
+        gitUrl: 'https://github.com/KINYENJE/AI_Summarizer',
         previewUrl: 'https://kinyenje-ai-summarizer.netlify.app/',
     },
     {
@@ -44,7 +44,7 @@ const projectData = [
         description: "This is a Chat GPT T-Shirt design generator",
         image: '/images/projects/t-shirt.png',
         tag: ["All", "React"],
-        gitUrl: '/',
+        gitUrl: 'https://github.com/KINYENJE/AI-tshirt-design',
         previewUrl: 'https://kinyenje-ai-shirt.netlify.app/',
     },
 ]
