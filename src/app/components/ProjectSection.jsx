@@ -7,7 +7,7 @@ import ProjectTag from './ProjectTag'
 const projectData = [
     {
         id: 1,
-        title: "ecommerce",
+        title: "Ecommerce",
         description: "This is an ecommerce website",
         image: '/images/projects/ecommerce.png',
         tag: ["All", "Next.js", "Tailwind CSS"],
@@ -16,8 +16,8 @@ const projectData = [
     },
     {
         id: 2,
-        title: "gym",
-        description: "This is a gym website",
+        title: "Gym App",
+        description: "This is a gym website for women",
         image: '/images/projects/gym.png',
         tag: ["All", "React"],
         gitUrl: 'https://github.com/KINYENJE/gym-react-app',
@@ -35,7 +35,7 @@ const projectData = [
     {
         id: 4,
         title: 'GPT Summarizer',
-        description: "This is a Chat GPT Summarizer for articles",
+        description: "This is a AI powered Summarizer for articles",
         image: '/images/projects/summarizer.png',
         tag: ["All", "Tailwind CSS", "Vite"],
         gitUrl: 'https://github.com/KINYENJE/AI_Summarizer',
@@ -44,7 +44,7 @@ const projectData = [
     {
         id: 5,
         title: 'GPT T-Shirt',
-        description: "This is a Chat GPT T-Shirt design generator",
+        description: "This is a AI powered T-Shirt design generator",
         image: '/images/projects/t-shirt.png',
         tag: ["All", "React","Tailwind CSS"],
         gitUrl: 'https://github.com/KINYENJE/AI-tshirt-design',
