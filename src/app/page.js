@@ -12,9 +12,16 @@ export default function Home() {
       <HeroSection />
       </div>
 
-      <AboutSection />
+      <div className=''>
+        <AboutSection />
 
-      <ProjectSection />
+      </div>
+
+
+      <div className='px-12'>
+        <ProjectSection />
+      </div>
+      
       
      
 
