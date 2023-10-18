@@ -67,14 +67,14 @@ const ProjectSection = () => {
     <h2 className='text-center text-4xl font-bold mt-4 mb-8 md:mb-12'>
         My Projects
     </h2>
-    <div className='text-white flex flex-row justify-center items-center gap-4 py-6'>
+    <div className='text-white flex flex-row justify-center items-center gap-4 py-6 '>
        <ProjectTag name='All' onClick={() => handleTagClick('All')} isSelected={selectedTag === 'All'} />
         <ProjectTag name='React' onClick={() => handleTagClick('React')} isSelected={selectedTag === 'React'} />
         <ProjectTag name='Next.js' onClick={() => handleTagClick('Next.js')} isSelected={selectedTag === 'Next.js'} />
         <ProjectTag name='Vite' onClick={() => handleTagClick('Vite')} isSelected={selectedTag === 'Vite'} />
-        <ProjectTag name='Tailwind CSS' onClick={() => handleTagClick('Tailwind CSS')} isSelected={selectedTag === 'Tailwind CSS'} />
+        <ProjectTag name='Tailwind' onClick={() => handleTagClick('Tailwind CSS')} isSelected={selectedTag === 'Tailwind CSS'} />
     </div>
-    <div className='grid md:grid-cols-3 gap-8 md:gap-12'>
+    <div className='grid md:grid-cols-3 gap-8 md:gap-12 '>
         {filteredProjects.map((project) => (
             <ProjectsCard
                 key={project.id}
