@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { FaSquareXTwitter } from 'react-icons/fa'
@@ -5,8 +7,38 @@ import { RiTwitterXFill } from 'react-icons/ri'
 import Link from 'next/link'
 
 const EmailSection = () => {
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const data = {
+      email: e.target.email.value,
+      subject: e.target.subject.value,
+      message: e.target.message.value,
+    }
+
+    const JSONdata = JSON.stringify(data)
+
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSONdata,
+    })
+
+    const result = await res.json()
+    console.log(result)
+
+    if (res.status === 200) {
+      console.log('Message Sent')
+    } else if (res.status === 400) {
+      console.log('Message failed to send')
+    }
+  }
+  
+  
   return (
-    <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative overflow-hidden'>
+    <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative '>
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#93A5CF] to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className='z-10 ml-10'>
         <h5 className='text-xl font-bold text-white my-2'>
@@ -33,19 +65,19 @@ const EmailSection = () => {
       </div>
 
       <div className='flex-1 justify-center items-center ml-32'>
-        <form action="" className='flex flex-col items-left justify-center gap-4'>
+        <form onSubmit={handleSubmit} className='flex flex-col items-left justify-center gap-4'>
           <div className='mb-6'>
             <label htmlFor="email"  type="email" className='text-white block mb-2 text-sm font-medium text-left'>
               Your Email:
             </label>
-            <input type='email' id='email' required placeholder='janedoe@gmail.com' className='bg-[#18191E] border border-[#33353F] placeholder-[#ADB7BE] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#93A5CF] focus:border-transparent' />
+            <input type='email' id='email' name="email"  required placeholder='janedoe@gmail.com' className='bg-[#18191E] border border-[#33353F] placeholder-[#ADB7BE] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#93A5CF] focus:border-transparent' />
           </div>
 
           <div className='mb-6'>
             <label htmlFor="subject" className='text-white block mb-2 text-sm font-medium'>
               Subject:
             </label>
-            <input type='text' id='subject' required placeholder='Topic of Discussion' className='bg-[#18191E] border border-[#33353F] placeholder-[#ADB7BE] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#93A5CF] focus:border-transparent' />
+            <input type='text' id='subject' name='subject' required placeholder='Topic of Discussion' className='bg-[#18191E] border border-[#33353F] placeholder-[#ADB7BE] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#93A5CF] focus:border-transparent' />
           </div>
 
           <div>
