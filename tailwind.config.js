@@ -13,6 +13,12 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    colors: {
+      ...require('tailwindcss/colors'),
+      primary: '#93A5CF',
+      secondary: '#E4EfE9',
+      tertiary: '#ADB7BE',
+    }
   },
   plugins: [],
 }

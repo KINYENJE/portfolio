@@ -5,6 +5,7 @@ import AboutSection from './components/AboutSection'
 import ProjectSection from './components/ProjectSection'
 import EmailSection from './components/EmailSection'
 import FooterSection from './components/FooterSection'
+import AchievementSection from './components/AchievementSection'
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
       <div className='container mt-32 mx-auto  px-12'>
       <HeroSection />
       </div>
+      
+      <AchievementSection />
 
       <div className=''>
         <AboutSection />
@@ -23,6 +26,7 @@ export default function Home() {
       <div className='px-12'>
         <ProjectSection />
       </div>
+
 
       <div>
         <EmailSection />
