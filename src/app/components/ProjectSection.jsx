@@ -1,8 +1,10 @@
 "use client"
 
-import React , {useState} from 'react'
+import React , {useState, useRef} from 'react'
 import ProjectsCard from './ProjectsCard'
 import ProjectTag from './ProjectTag'
+import { motion, useInView } from 'framer-motion'
+
 
 const projectData = [
     {
@@ -55,6 +57,8 @@ const projectData = [
 const ProjectSection = () => {
 
     const [selectedTag, setSelectedTag] = useState('All')
+    const ref = useRef(null)
+    const isInView = useInView(ref, {once: true})
 
     const handleTagClick = (tag) => {
         setSelectedTag(tag)
@@ -62,8 +66,16 @@ const ProjectSection = () => {
 
     const filteredProjects = projectData.filter((project) => project.tag.includes(selectedTag))
 
+    const cardVariants = {
+        initial: {y:50, opacity: 0},
+        animate: {
+            y: 0,
+            opacity: 1,
+        },
+    }
+
   return (
-    <>
+    <section>
     <h2 className='text-center text-4xl font-bold mt-4 mb-8 md:mb-12'>
         My Projects
     </h2>
@@ -74,9 +86,16 @@ const ProjectSection = () => {
         <ProjectTag name='Vite' onClick={() => handleTagClick('Vite')} isSelected={selectedTag === 'Vite'} />
         <ProjectTag name='Tailwind' onClick={() => handleTagClick('Tailwind CSS')} isSelected={selectedTag === 'Tailwind CSS'} />
     </div>
-    <div className='grid md:grid-cols-3 gap-8 md:gap-12 '>
-        {filteredProjects.map((project) => (
-            <ProjectsCard
+    <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12 '>
+        {filteredProjects.map((project, index) => (
+           <motion.li
+              key={index}
+              variants={cardVariants}
+                initial='initial'
+                animate={isInView ? 'animate' : 'initial'}
+                transition={{duration: 0.5, delay: index * 0.4}}
+           >
+             <ProjectsCard
                 key={project.id}
                 title={project.title}
                 description={project.description}
@@ -84,10 +103,11 @@ const ProjectSection = () => {
                 gitUrl={project.gitUrl}
                 previewUrl={project.previewUrl}
             />
+           </motion.li>
         ))}
         
-    </div>
-    </>
+    </ul>
+    </section>
   )
 }
 
