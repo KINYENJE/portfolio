@@ -61,12 +61,12 @@ const AboutSection = () => {
 
             <Image src='/images/passport.png' alt= 'about image' width={500} height={500}  />
            <div className='mt-8 md:mt-0 text-left flex flex-col h-full'>
-           <h2 className='text-4xl font-bold text-white mb-4 '>
+           <h2 className='text-4xl font-bold text-white mb-8 md:mb-12 '>
             About Me
             </h2>
             <p className='text-base lg:text-lg '>
             I&rsquo;m  a passionate full-stack web developer and a certified <span className=' font-extrabold'>Computer Scientist</span>. 
-                <br /> 
+                <br /> <br />
             My journey began with HTML, CSS, and JavaScript, and I&rsquo;ve since expanded my skill set to include cutting-edge technologies such as React.js, Next.js, Node.js, and MongoDB. I love turning ideas into elegant, functional, and user-friendly web applications.
 
  

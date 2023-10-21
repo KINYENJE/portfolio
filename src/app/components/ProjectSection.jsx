@@ -79,7 +79,7 @@ const ProjectSection = () => {
     <h2 className='text-center text-4xl font-bold mt-4 mb-8 md:mb-12'>
         My Projects
     </h2>
-    <div className='text-white flex flex-row justify-center items-center gap-4 py-6 '>
+    <div className='text-white flex flex-row justify-center items-center gap-4 py-6  max-md:justify-start max-md:overflow-x-auto'>
        <ProjectTag name='All' onClick={() => handleTagClick('All')} isSelected={selectedTag === 'All'} />
         <ProjectTag name='React' onClick={() => handleTagClick('React')} isSelected={selectedTag === 'React'} />
         <ProjectTag name='Next.js' onClick={() => handleTagClick('Next.js')} isSelected={selectedTag === 'Next.js'} />
