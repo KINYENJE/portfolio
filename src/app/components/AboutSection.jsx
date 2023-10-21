@@ -56,7 +56,7 @@ const AboutSection = () => {
     }
     
   return (
-    <section className='text-white'>
+    <section className='text-white' id='about'>
         <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
 
             <Image src='/images/passport.png' alt= 'about image' width={500} height={500}  />
@@ -65,7 +65,12 @@ const AboutSection = () => {
             About Me
             </h2>
             <p className='text-base lg:text-lg '>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa sunt laudantium perspiciatis blanditiis numquam iusto facere dolore perferendis, voluptatibus nostrum eveniet itaque adipisci? Accusantium sit expedita alias sed explicabo quam.
+            I&rsquo;m  a passionate full-stack web developer and a certified <span className=' font-extrabold'>Computer Scientist</span>. 
+                <br /> 
+            My journey began with HTML, CSS, and JavaScript, and I&rsquo;ve since expanded my skill set to include cutting-edge technologies such as React.js, Next.js, Node.js, and MongoDB. I love turning ideas into elegant, functional, and user-friendly web applications.
+
+ 
+
             </p>
 
             <div className='flex flex-row mt-8'>

@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion'
+import Link from 'next/link';
 
 
 const HeroSection = () => {
@@ -38,12 +39,15 @@ const HeroSection = () => {
                      />
                                
                 </h1>
-                <p className = 'text-tertiary text-base text-lg  lg:text-xl'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <p className = 'text-tertiary text-base  lg:text-xl'>
+                    Welcome to my portfolio, where you&apos;ll find a showcase of my projects and a glimpse into my world of <span className='font-extrabold'> web development</span> . <br /> <br /> Let&rsquo;s connect and collaborate on exciting projects together!
+
                 </p>
                 <div className='mt-6 mb-3'>
                     <button className='px-6 w-full sm:w-fit py-3 rounded-full mr-4 bg-gradient-to-br from-primary via-secondary to-primary  hover:bg-slate-200 text-black  font-medium'>
-                        Hire Me
+                        <Link href="#projects">
+                            Projects
+                        </Link>
                     </button>
                    <a href="/CV/Resume.pdf" download={'Resume'}>
                    <button className='px-[2px] py-[2px] w-full sm:w-fit rounded-full bg-gradient-to-br from-primary via-secondary to-primary hover:bg-slate-800 text-white mt-3 '>
