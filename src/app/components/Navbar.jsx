@@ -3,8 +3,11 @@ import React , {useState} from 'react'
 import Link from 'next/link'
 import NavLink from './NavLink'
 import MenuOverlay from './MenuOverlay'
+import Image from 'next/image'
 
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { TbBrandNextjs } from 'react-icons/tb'
+
 
 const navLinks = [
   {
@@ -31,7 +34,8 @@ const Navbar = () => {
       <div className='flex flex-wrap container lg:py-4 items-center justify-between mx-auto py-4 px-8'>
         
         <Link href={"/"} className='text-2xl md:text-5xl text-white font-semibold'>
-          LOGO
+         
+          <Image src='/images/n-logo.png' alt='logo' width={60} height={60}  />
         </Link>
 
 
