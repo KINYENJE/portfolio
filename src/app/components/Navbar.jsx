@@ -27,6 +27,18 @@ const navLinks = [
 
 const Navbar = () => {
 
+  const handleClick = e => {
+    e.preventDefault()
+
+    const targetAttr = e.target.getAttribute('href');
+    const location = document.querySelector(targetAttr).offsetTop
+
+    window.scrollTo({
+      left: 0,
+      top:location - 80,
+    });
+  }
+
   const [navbarOpen, setNavbarOpen] = useState(false)
   
   return (
@@ -35,9 +47,25 @@ const Navbar = () => {
         
         <Link href={"/"} className='text-2xl md:text-5xl text-white font-semibold'>
          
-          <Image src='/images/n-logo.png' alt='logo' width={60} height={60}  />
+          <Image src='/images/n-logo.png' alt='logo' width={60} height={60}  className='max-md:w-10 max-md:h-10'/>
         </Link>
 
+
+        
+
+        <div className='menu hidden md:flex md:w-auto md:justify-center md:items-center md:self-center md:text-center ' id='navbar'>
+          <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 text-center mt-0 '>
+            
+              {navLinks.map((link, index) => (
+                <li key={index}>
+                  <NavLink onClick={handleClick}  href={link.path} title={link.title} />
+                </li>
+                
+              ))}
+            
+          </ul>
+
+        </div>
 
         <div className='mobile-menu hidden max-md:block'>
           {!navbarOpen ? (
@@ -56,19 +84,7 @@ const Navbar = () => {
 
         </div>
 
-        <div className='menu hidden md:block md:w-auto' id='navbar'>
-          <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 '>
-            
-              {navLinks.map((link, index) => (
-                <li key={index}>
-                  <NavLink  href={link.path} title={link.title} />
-                </li>
-                
-              ))}
-            
-          </ul>
-
-        </div>
+        
       </div>
       {navbarOpen && (
         <div className='absolute right-1 z-10 bg-[#121212] rounded-xl bg-opacity-50 border border-slate-200'
