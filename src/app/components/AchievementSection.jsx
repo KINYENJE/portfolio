@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect } from 'react'
 import dynamic from 'next/dynamic'
-import { useSpring, animated } from '@react-spring/web';
+import { useSpring, animated, useInView } from '@react-spring/web';
 import { redirect } from 'next/navigation';
 
 const AnimatedNumber = dynamic(() => {
@@ -35,6 +35,8 @@ const achievementsList = [
 
 
 export const Number = ({ value}) => {
+
+  const [ref, inView] = useInView({ threshold: 0.5, triggerOnce: true });
   
   const { number } = useSpring({
     from: { number: 0 },
@@ -47,8 +49,8 @@ export const Number = ({ value}) => {
    
   
   return (
-    <animated.span>
-      {number.to((n) => n.toFixed(0))}
+    <animated.span ref={ref}>
+      {inView && number.to((n) => n.toFixed(0))}
     </animated.span>
   ); 
 }

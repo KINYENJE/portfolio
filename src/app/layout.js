@@ -7,6 +7,9 @@ import { Toaster } from 'react-hot-toast'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
+  icons: {
+    icon: '/logo-icon/logo.jpg',
+  },
   title: 'KINYENJE Portfolio',
   description: 'Developed using Next.js',
 }
@@ -14,6 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      
       <body className={inter.className}>
         <Toaster position='top-center' toastOptions={{
           duration: 3000,
