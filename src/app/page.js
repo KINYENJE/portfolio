@@ -15,20 +15,22 @@ export default function Home() {
       <HeroSection />
       </div>
       
-      <AchievementSection />
+      <div className='container mt-32 mx-auto  px-12'>
+       <AchievementSection />
+      </div>
 
-      <div className=''>
+      <div className='container mt-32 mx-auto  px-12'>
         <AboutSection />
 
       </div>
 
 
-      <div className='px-12'>
+      <div className='container mt-32 mx-auto  px-12'>
         <ProjectSection />
       </div>
 
 
-      <div>
+      <div className='container mt-32 mx-auto  px-12'>
         <EmailSection />
       </div>
 

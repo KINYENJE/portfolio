@@ -1,10 +1,12 @@
 "use client"
 
 import React, {useEffect, useState} from 'react'
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { AiFillGithub, AiFillLinkedin, AiFillInstagram} from 'react-icons/ai'
 
 import { RiTwitterXFill } from 'react-icons/ri'
 import Link from 'next/link'
+import { toast } from 'react-hot-toast'
+import { to } from '@react-spring/web'
 
 const EmailSection = () => {
   const [emailSent, setEmailSent] = useState(false)
@@ -36,16 +38,18 @@ const EmailSection = () => {
     if (res.status === 200) {
       console.log('Message Sent')
       setEmailSent(true)
+      toast.success('Message Sent Successfully')
     } else if (res.status === 500) {
       console.log('Message failed to send')
+      toast.error('Message failed to send')
       setEmailSent(false)
     }
   }
   
   
   return (
-    <section id='contact' className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative overflow-hidden'>
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+    <section id='contact' className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative '>
+      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary to-transparent rounded-full h-40 w-40 z-0 blur-lg absolute top-2/4 left-4 max-md:hidden transform translate-x-1/2 translate-1/2"></div>
       <div className='z-10 ml-10'>
         <h5 className='text-xl font-bold text-white my-2'>
           Let&rsquo;s Talk Business
@@ -53,19 +57,23 @@ const EmailSection = () => {
         <p className='text-tertiary mb-4 max-w-md'>
           I&apos;m currently looking for new opportunities and to grow my network. If you have any questions, feel free to reach out to me.
         </p>
-        <div className='socials flex flex-row gap-2 '>
+        <div className='socials flex flex-row gap-4 items-center justify-center my-4 px-8 '>
           <Link href={"https://github.com/KINYENJE"}>
             
-              <AiFillGithub className='h-8 w-8' />
+              <AiFillGithub className='h-8 w-8 hover:text-tertiary' />
             
           </Link>
           <Link href={"https://twitter.com/NKinyenje"}>
             
-            <RiTwitterXFill className='h-8 w-8' />
+            <RiTwitterXFill className='h-8 w-8 hover:text-tertiary' />
+          </Link>
+          <Link href={"https://www.instagram.com/kinyenjezzz/"}>
+            
+            <AiFillInstagram className='h-8 w-8 hover:text-tertiary' />
           </Link>
           <Link href={"https://www.linkedin.com/in/james-mbugua-22850423a/"}>
             
-              <AiFillLinkedin className='h-8 w-8' />
+              <AiFillLinkedin className='h-8 w-8 hover:text-tertiary rounded-full' />
           </Link>
         </div>
       </div>
@@ -97,11 +105,7 @@ const EmailSection = () => {
             Send Message
           </button>
 
-          {emailSent && (
-            <p className='text-green-500 font-semibold'>
-              Message Sent Successfully!
-            </p>
-          )}
+          
 
           
            

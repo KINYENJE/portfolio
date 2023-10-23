@@ -11,22 +11,32 @@ const FooterSection = () => {
         <Link href={"/"}>
         <Image src='/images/n-logo.png' alt='brand' width={70} height={70}  />
         </Link>
-        
-        <div className='flex flex-nowrap items-center justify-center'>
+
+        <p className="text-slate-600 flex justify-center place-self-end max-md:hidden text-xs">All rights reserved by <span className="font-bold underline hover:text-white ml-1">
+          <a href=""> Kinyenje.</a>
+          </span> 
+          </p>
+
+        <div className="flex max-md:justify-between max-md:flex-col max-md:items-start md:justify-evenly">
+        <div className='flex items-center justify-center '>
         <p className="pr-1">Developed using</p>
         <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">        
           <TbBrandNextjs className='text-2xl text-white hover:text-slate-600' />
           
         </a>
         <p className="font-bold text-slate-600 underline">
-          <a href="https://nextjs.org/">extJs</a>
+          <a href="https://nextjs.org/">extJs.</a>
         </p>
         </div>
 
-        <p className="text-slate-600 flex justify-center items-center">All rights reserved by <span className="font-bold underline hover:text-white ml-1">
-          <a href=""> Kinyenje.</a>
-          </span> 
+        <p className="text-slate-600 text-xs flex justify-center items-center md:hidden">
+        <span className="font-bold  hover:text-white ml-1">
+          <a href="">©2023 Kinyenje.</a>
+          </span>
+          All rights reserved.  
           </p>
+        </div>
+        
       </div>
     </footer>
   );

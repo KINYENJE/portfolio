@@ -43,11 +43,11 @@ const Navbar = () => {
   
   return (
     <nav className='fixed mx-auto border-b border-b-[#33353F] top-0 left-0 right-0 bg-[#121212] bg-opacity-90 z-10'>
-      <div className='flex flex-wrap container lg:py-4 items-center justify-between mx-auto py-4 px-8'>
+      <div className='flex flex-wrap container md:py-4 items-center justify-between mx-auto py-2 max-sm:py-1 px-8'>
         
-        <Link href={"/"} className='text-2xl md:text-5xl text-white font-semibold'>
+        <Link href={"/"} className=''>
          
-          <Image src='/images/n-logo.png' alt='logo' width={60} height={60}  className='max-md:w-10 max-md:h-10'/>
+          <Image src='/images/n-logo.png' alt='logo' width={70} height={70}  className='max-md:w-12 max-md:h-12'/>
         </Link>
 
 
@@ -69,7 +69,7 @@ const Navbar = () => {
 
         <div className='mobile-menu hidden max-md:block'>
           {!navbarOpen ? (
-            <button className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'>
+            <button className='flex items-center px-3 py-2 max-md:border-none border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'>
               <FaBars className='h-5 w-5 '
               onClick={() => setNavbarOpen(!navbarOpen)} 
               />
