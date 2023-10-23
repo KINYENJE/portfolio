@@ -48,9 +48,9 @@ const EmailSection = () => {
   
   
   return (
-    <section id='contact' className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative '>
+    <section id='contact' className='grid md:grid-cols-2 my-12 py-24 gap-4 relative '>
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary to-transparent rounded-full h-40 w-40 z-0 blur-lg absolute top-2/4 left-4 max-md:hidden transform translate-x-1/2 translate-1/2"></div>
-      <div className='z-10 ml-10'>
+      <div className='z-10'>
         <h5 className='text-xl font-bold text-white my-2'>
           Let&rsquo;s Talk Business
         </h5>
@@ -78,7 +78,7 @@ const EmailSection = () => {
         </div>
       </div>
 
-      <div className='flex-1 justify-center items-center ml-32'>
+      <div className='flex justify-center items-center'>
         <form onSubmit={handleSubmit} className='flex flex-col items-left justify-center gap-4'>
           <div className='mb-6'>
             <label htmlFor="email"  type="email" className='text-white block mb-2 text-sm font-medium text-left'>
