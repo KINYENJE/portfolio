@@ -6,6 +6,11 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --text: #000000;
+  --background: #a1a6aa;
+  --primary: #ed9145;
+  --secondary: #d5e8f1;
+  --accent: #fdfdfd;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +18,10 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    /* --background: #121212;
+    --primary: '#93A5CF';
+    --secondary: '#E4EfE9';
+    --tertiary: '#ADB7BE'; */
   }
 }
 
@@ -38,5 +47,22 @@ body {
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
     }
+  }
+}
+
+@layer base {
+  :root {
+    --text: #000000;
+    --background: #a1a6aa;
+    --primary: #ed9145;
+    --secondary: #d5e8f1;
+    --accent: #fdfdfd;
+  }
+  .dark {
+    --text: #ffffff;
+    --background: #555a5e;
+    --primary: #ba5e12;
+    --secondary: #0e212a;
+    --accent: #030303;
   }
 }

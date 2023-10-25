@@ -8,8 +8,9 @@ import FooterSection from './components/FooterSection'
 import AchievementSection from './components/AchievementSection'
 
 export default function Home() {
+  
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212] overflow-x-hidden ">
+    <main className="flex min-h-screen flex-col bg-lbackground dark:bg-[#121212] overflow-x-hidden ">
       <Navbar />
       <div className='container mt-32 mx-auto  px-12'>
       <HeroSection />

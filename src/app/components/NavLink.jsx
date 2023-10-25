@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const NavLink = ({href, title, onClick}) => {
   return (
-    <Link onClick={onClick} href={href} className=' text-tertiary block py-2 pl-3 pr-4 sm:text-xl rounded md:p-0 hover:text-white'>
+    <Link onClick={onClick} href={href} className=' text-laccent block py-2 pl-3 pr-4 sm:text-xl rounded md:p-0 hover:text-white'>
                 {title}
     </Link>
   )

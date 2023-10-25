@@ -13,6 +13,7 @@
     "@react-spring/web": "^9.7.3",
     "framer-motion": "^10.16.4",
     "next": "latest",
+    "next-themes": "^0.2.1",
     "react": "latest",
     "react-animated-numbers": "^0.16.0",
     "react-dom": "latest",

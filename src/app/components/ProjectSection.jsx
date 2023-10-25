@@ -76,10 +76,10 @@ const ProjectSection = () => {
 
   return (
     <section id='projects'>
-    <h2 className='text-center text-4xl font-bold mt-4 mb-8 md:mb-12'>
+    <h2 className='text-ltext dark:text-white text-center text-4xl font-bold mt-4 mb-8 md:mb-12 underline decoration-lprimary dark:decoration-secondary decoration-double decoration-1 underline-offset-2'>
         My Projects
     </h2>
-    <div className='text-white flex flex-row justify-center items-center gap-4 py-6  max-md:justify-start max-md:overflow-x-auto'>
+    <div className='text-ltext dark:text-white flex flex-row justify-center items-center gap-4 py-6  max-md:justify-start max-md:overflow-x-auto'>
        <ProjectTag name='All' onClick={() => handleTagClick('All')} isSelected={selectedTag === 'All'} />
         <ProjectTag name='React' onClick={() => handleTagClick('React')} isSelected={selectedTag === 'React'} />
         <ProjectTag name='Next.js' onClick={() => handleTagClick('Next.js')} isSelected={selectedTag === 'Next.js'} />

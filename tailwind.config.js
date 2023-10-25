@@ -5,6 +5,7 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -15,10 +16,27 @@ module.exports = {
     },
     colors: {
       ...require('tailwindcss/colors'),
-      primary: '#93A5CF',
-      secondary: '#E4EfE9',
+      lprimary: 'var(--primary)',
+      lsecondary: 'var(--secondary)',
       tertiary: '#ADB7BE',
+      lbackground: 'var(--background)',
+      ltext: 'var(--text)',
+      laccent: 'var(--accent)',
+      background: '#121212',
+      primary: '#6366f1',
+      secondary: '#0ea5e9',
+
     }
   },
   plugins: [],
 }
+
+
+// colors: {
+//   'text': 'var(--text)',
+//   'background': 'var(--background)',
+//   'primary': 'var(--primary)',
+//   'secondary': 'var(--secondary)',
+//   'accent': 'var(--accent)',
+//  },
+ 

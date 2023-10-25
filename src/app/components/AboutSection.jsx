@@ -1,8 +1,10 @@
 "use client"
 
-import React, {useState, useTransition} from 'react'
+import React, {useState, useTransition, useRef, useEffect} from 'react'
 import Image from 'next/image'
 import TabButton from './TabButton'
+import { motion, useInView } from 'framer-motion'
+
 
 const TAB_DATA = [
     {
@@ -54,18 +56,35 @@ const AboutSection = () => {
         })
         
     }
+
+    const ref = useRef(null)
+    const isInView = useInView(ref)
+
+    useEffect(() => {
+        console.log("About is in view: ", isInView)
+      }, [isInView])
     
   return (
     <section className='text-white' id='about'>
         <div className='md:grid md:grid-cols-2 gap-8 items-center py-8  xl:gap-16 sm:py-16 '>
 
+            <div className='dark:grayscale'>
             <Image src='/images/passport.png' alt= 'about image' width={500} height={500}  />
+            </div>
            <div className='mt-8 md:mt-0 text-left flex flex-col h-full'>
-           <h2 className='text-4xl font-bold text-white mb-8 md:mb-12 '>
+           <h2 className='text-4xl font-bold text-ltext dark:text-white mb-8 md:mb-12 text-center'>
             About Me
+            <motion.div ref={ref}
+            initial={{ width: '0%' }}
+            animate={{ width: '100%'  }}
+            transition={{ duration: 12 }}
+            className='bg-gradient-to-r from-lprimary via-lsecondary to-laccent  dark:from-primary dark:from-50% dark:to-secondary h-1 rounded-3xl'>
+
+            </motion.div>
             </h2>
+            
             <p className='text-base lg:text-lg '>
-            I&rsquo;m  a passionate full-stack web developer and a certified <span className=' font-extrabold'>Computer Scientist</span>. 
+            I&rsquo;m  a passionate full-stack web developer and a certified <span className=' font-extrabold text-lsecondary dark:text-secondary'>Computer Scientist</span>. 
                 <br /> <br />
             My journey began with HTML, CSS, and JavaScript, and I&rsquo;ve since expanded my skill set to include cutting-edge technologies such as React.js, Next.js, Node.js, and MongoDB. I love turning ideas into elegant, functional, and user-friendly web applications.
 

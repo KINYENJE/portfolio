@@ -30,9 +30,9 @@ const ProjectsCard = ({imgUrl, title, description, gitUrl, previewUrl }) => {
             </div>
 
         </div>
-        <div className='text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4'>
-            <h5 className='text-xl font-semibold mb-2'>{title}</h5>
-            <p className='text-tertiary'>{description}</p>
+        <div className='text-white rounded-b-xl  bg-gradient-to-br from-lsecondary via-laccent to-lsecondary to-70%  dark:from-[#181818] dark:to-[#181818] py-6 px-4'>
+            <h5 className='text-xl font-semibold mb-2 dark:text-primary text-ltext'>{title}</h5>
+            <p className='dark:text-tertiary text-black opacity-70'>{description}</p>
         </div>
 
 
