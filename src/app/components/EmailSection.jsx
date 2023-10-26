@@ -60,20 +60,20 @@ const EmailSection = () => {
         <div className='socials flex flex-row gap-4 items-center justify-center my-4 px-8 text-ltext dark:text-white'>
           <Link href={"https://github.com/KINYENJE"}>
             
-              <AiFillGithub className='h-8 w-8 hover:text-tertiary' />
+              <AiFillGithub className='h-8 w-8 dark:hover:text-tertiary hover:text-lsecondary' />
             
           </Link>
           <Link href={"https://twitter.com/NKinyenje"}>
             
-            <RiTwitterXFill className='h-8 w-8 hover:text-tertiary' />
+            <RiTwitterXFill className='h-8 w-8 dark:hover:text-tertiary hover:text-lsecondary' />
           </Link>
           <Link href={"https://www.instagram.com/kinyenjezzz/"}>
             
-            <AiFillInstagram className='h-8 w-8 hover:text-tertiary' />
+            <AiFillInstagram className='h-8 w-8 dark:hover:text-tertiary hover:text-lsecondary' />
           </Link>
           <Link href={"https://www.linkedin.com/in/james-mbugua-22850423a/"}>
             
-              <AiFillLinkedin className='h-8 w-8 hover:text-tertiary rounded-full' />
+              <AiFillLinkedin className='h-8 w-8 dark:hover:text-tertiary hover:text-lsecondary rounded-full' />
           </Link>
         </div>
       </div>
