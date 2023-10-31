@@ -50,7 +50,7 @@ const EmailSection = () => {
   return (
     <section id='contact' className='grid md:grid-cols-2 my-12 py-24 gap-4 relative '>
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-lsecondary dark:from-primary to-transparent rounded-full h-40 w-40 z-0 blur-lg absolute top-2/4 left-4 max-md:hidden transform translate-x-1/2 translate-1/2"></div>
-      <div className='z-10'>
+      <div className='z-0'>
         <h5 className='text-xl font-bold text-ltext dark:text-white my-2'>
           Let&rsquo;s Talk Business
         </h5>
