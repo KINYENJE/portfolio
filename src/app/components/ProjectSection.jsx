@@ -18,16 +18,16 @@ const projectData = [
     },
     {
         id: 2,
-        title: "Gym App",
-        description: "This is a gym website for women",
-        image: '/images/projects/gym.png',
-        tag: ["All", "React"],
+        title: "FIGAR FITNESS APP",
+        description: "This is a personalised fitness app geared to helping women stay fit",
+        image: '/images/projects/figar.png',
+        tag: ["All", "React, Tailwind CSS"],
         gitUrl: 'https://github.com/KINYENJE/gym-react-app',
         previewUrl: 'https://kinyenje-gym-site.netlify.app/',
     },
     {
         id: 3,
-        title: 'Neki',
+        title: 'Neki Shoe Website',
         description: "This is a Nike shoe clone website",
         image: '/images/projects/neki.png',
         tag: ["All", "Vite", "Tailwind CSS"],
@@ -37,7 +37,7 @@ const projectData = [
     {
         id: 4,
         title: 'GPT Summarizer',
-        description: "This is a AI powered Summarizer for articles",
+        description: "This is a AI powered article summarizer",
         image: '/images/projects/summarizer.png',
         tag: ["All", "Tailwind CSS", "Vite"],
         gitUrl: 'https://github.com/KINYENJE/AI_Summarizer',
@@ -46,7 +46,7 @@ const projectData = [
     {
         id: 5,
         title: 'GPT T-Shirt',
-        description: "This is a AI powered T-Shirt design generator",
+        description: "This is a AI powered 3D T-Shirt design generator",
         image: '/images/projects/t-shirt.png',
         tag: ["All", "React","Tailwind CSS"],
         gitUrl: 'https://github.com/KINYENJE/AI-tshirt-design',
@@ -79,7 +79,7 @@ const ProjectSection = () => {
     <h2 className='text-ltext dark:text-white text-center text-4xl font-bold mt-4 mb-8 md:mb-12 underline decoration-lprimary dark:decoration-secondary decoration-double decoration-1 underline-offset-2'>
         My Projects
     </h2>
-    <div className='text-ltext dark:text-white flex flex-row justify-center items-center gap-4 py-6  max-md:justify-start max-md:overflow-x-auto'>
+    <div className='text-ltext dark:text-white flex flex-row justify-center items-center gap-4 py-6  max-md:justify-start max-md:overflow-x-auto no-scrollbar'>
        <ProjectTag name='All' onClick={() => handleTagClick('All')} isSelected={selectedTag === 'All'} />
         <ProjectTag name='React' onClick={() => handleTagClick('React')} isSelected={selectedTag === 'React'} />
         <ProjectTag name='Next.js' onClick={() => handleTagClick('Next.js')} isSelected={selectedTag === 'Next.js'} />

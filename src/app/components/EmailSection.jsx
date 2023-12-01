@@ -10,9 +10,7 @@ import { to } from '@react-spring/web'
 
 const EmailSection = () => {
   const [emailSent, setEmailSent] = useState(false)
-  // useEffect(() => {
-  //   setEmailSent('')
-  // }, [])
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault()

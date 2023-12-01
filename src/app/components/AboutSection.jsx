@@ -4,6 +4,18 @@ import React, {useState, useTransition, useRef, useEffect} from 'react'
 import Image from 'next/image'
 import TabButton from './TabButton'
 import { motion, useInView } from 'framer-motion'
+import { FaReact } from 'react-icons/fa'
+import { SiExpress, SiMongodb , SiTailwindcss, SiTypescript } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io5";
+import { IoLogoNodejs } from "react-icons/io5";
+import { IoLogoHtml5 } from "react-icons/io5";
+import { IoLogoCss3 } from "react-icons/io5";
+import { TbBrandNextjs } from 'react-icons/tb'
+
+
+
+
+
 
 
 const TAB_DATA = [
@@ -11,15 +23,24 @@ const TAB_DATA = [
         title: 'Skills',
         id: 'skills',
         content: (
-            <ul className='list-disc pl-4'>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>Next.js</li>
-                <li>MongoDB</li>
-                <li>Tailwind CSS</li>
-            </ul>
+            <div className='grid md:grid-cols-2 grid-col-1  '>
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><FaReact className='text-cyan-300 animate-spin-slow text-3xl bg-black rounded-full p-0.5'/>React.Js</div>
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><TbBrandNextjs className=' text-3xl bg-black rounded-full p-0.5'/>Next.Js</div>
+                
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><IoLogoJavascript className='text-yellow-400  text-2xl bg-black rounded-sm'/>Javascript</div>
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><SiTypescript className='text-blue-400 text-2xl bg-black rounded-sm'/>Typescript</div>
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><IoLogoNodejs className='text-green-600  text-3xl bg-black rounded-full p-0.5'/>Node.Js</div>
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><SiExpress className='text-pink-600 text-3xl bg-black rounded-full p-0.5'/>Express</div>
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><SiMongodb className='text-green-400 text-3xl bg-black rounded-full p-0.5'/>MongoDB</div>
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><SiTailwindcss className='text-cyan-400 text-3xl bg-black rounded-full p-0.5'/>Tailwind CSS</div>
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><IoLogoHtml5 className='text-orange-600 text-3xl bg-black rounded-full p-[3px]'/>HTML5</div>
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><IoLogoCss3 className='text-blue-400 text-3xl bg-black rounded-full p-[3px]'/>CSS</div>
+                
+               
+                
+                
+
+            </div>
         )
     },
     {
@@ -61,7 +82,7 @@ const AboutSection = () => {
     const isInView = useInView(ref)
 
     useEffect(() => {
-        console.log("About is in view: ", isInView)
+        // console.log("About is in view: ", isInView)
       }, [isInView])
     
   return (
@@ -77,7 +98,7 @@ const AboutSection = () => {
             <motion.div ref={ref}
             initial={{ width: '0%' }}
             animate={{ width: '100%'  }}
-            transition={{ duration: 12 }}
+            transition={{ duration: 20 }}
             className='bg-gradient-to-r from-lprimary via-lsecondary to-laccent  dark:from-primary dark:from-50% dark:to-secondary h-1 rounded-3xl'>
 
             </motion.div>
