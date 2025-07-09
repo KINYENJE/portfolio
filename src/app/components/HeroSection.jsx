@@ -49,7 +49,7 @@ const HeroSection = () => {
                             Projects
                         </Link>
                     </button>
-                   <a href="/CV/resume.pdf" download={'resume'}>
+                   <a href="/CV/Resume.pdf" download={'resume'}>
                    <button className='px-[2px] py-[2px] w-full sm:w-fit rounded-full bg-gradient-to-br from-ltext to-ltext dark:from-primary dark:via-secondary dark:to-primary hover:bg-slate-800 text-white mt-3 animate-bounce shadow-lg shadow-black max-md:mt-8'>
                         <span className='block text-ltext bg-lprimary dark:bg-[#121212] dark:text-white rounded-full px-5 py-2 font-medium'>
                         Download CV
