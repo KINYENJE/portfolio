@@ -11,11 +11,8 @@ import { IoLogoNodejs } from "react-icons/io5";
 import { IoLogoHtml5 } from "react-icons/io5";
 import { IoLogoCss3 } from "react-icons/io5";
 import { TbBrandNextjs } from 'react-icons/tb'
-
-
-
-
-
+import { SiPython } from 'react-icons/si'
+import { SiSqlite } from 'react-icons/si'
 
 
 const TAB_DATA = [
@@ -35,7 +32,9 @@ const TAB_DATA = [
                 <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><SiTailwindcss className='text-cyan-400 text-3xl bg-black rounded-full p-0.5'/>Tailwind CSS</div>
                 <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><IoLogoHtml5 className='text-orange-600 text-3xl bg-black rounded-full p-[3px]'/>HTML5</div>
                 <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><IoLogoCss3 className='text-blue-400 text-3xl bg-black rounded-full p-[3px]'/>CSS</div>
-                
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><SiPython className='text-yellow-400 text-3xl bg-black rounded-full p-0.5'/>Python</div>
+                {/** sql*/}
+                <div className='flex gap-4 justify-normal items-center text-2xl font-semibold'><SiSqlite className='text-green-400 text-3xl bg-black rounded-full p-0.5'/>SQL</div>
                
                 
                 
