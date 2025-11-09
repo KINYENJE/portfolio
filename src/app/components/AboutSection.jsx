@@ -58,8 +58,9 @@ const TAB_DATA = [
         content: (
             <ul className='list-disc pl-4'>
                 <li>Freelance Web Developer</li>
-                <li>Software Engineer at Aquaprime Water Limited</li>
-                <li>Software Engineer at JKUAT </li>
+                <li>Software Engineer at Aquaprime Water Limited at 2022 - 2023</li>
+                <li>Software Engineer at JKUAT at 2024 </li>
+                <li>Worked with KOICA in developing an AI powered smart mushroom farming solution to boost mushroom production while promoting climate change. 2024 - 2025</li>
             </ul>
         )
     }
