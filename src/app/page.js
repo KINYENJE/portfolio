@@ -6,6 +6,7 @@ import ProjectSection from './components/ProjectSection'
 import EmailSection from './components/EmailSection'
 import FooterSection from './components/FooterSection'
 import AchievementSection from './components/AchievementSection'
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
   
@@ -36,10 +37,8 @@ export default function Home() {
       </div>
 
       <FooterSection />
-  
-      
-      
-     
+
+      <Analytics />
 
     </main>
   )
