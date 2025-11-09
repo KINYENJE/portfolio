@@ -29,7 +29,7 @@ const HeroSection = () => {
                             3000, // wait 1s before replacing "Mice" with "Hamsters"
                             'A Full-Stack Developer.',
                             3000,
-                            'A Software Engineer.',
+                            'A Machine Learning Engineer.',
                             3000,
                         
                         ]}
@@ -40,7 +40,7 @@ const HeroSection = () => {
                                
                 </h1>
                 <p className = 'text-laccent dark:text-tertiary text-base  lg:text-xl'>
-                    Welcome to my portfolio, where you&apos;ll find a showcase of my projects and a glimpse into my world of <span className='font-extrabold'> web development</span> . <br /> <br /> Let&rsquo;s connect and collaborate on exciting projects together!
+                    Welcome to my portfolio, where you&apos;ll find a showcase of my projects and a glimpse into my world of <span className='font-extrabold'> software development</span> and <span className='font-extrabold'> machine learning</span>. <br /> <br /> Let&rsquo;s connect and collaborate on exciting projects together!
 
                 </p>
                 <div className='mt-6 mb-3 '>

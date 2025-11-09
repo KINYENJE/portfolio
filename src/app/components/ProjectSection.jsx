@@ -52,6 +52,24 @@ const projectData = [
         gitUrl: 'https://github.com/KINYENJE/AI-tshirt-design',
         previewUrl: 'https://kinyenje-ai-shirt.netlify.app/',
     },
+    {
+        id: 6,
+        title: 'Bikey Rental App',
+        description: "This is a bike rental application for both customers and admin",
+        image: '/images/projects/bikey.png',
+        tag: ["All", "Next.js", "Tailwind CSS"],
+        gitUrl: 'https://github.com/KINYENJE/nextjs-bike-rental-app',
+        previewUrl: 'https://bikey-rental.vercel.app/',
+    },
+    {
+        id: 7,
+        title: '3D Mushroom Farming Website',
+        description: "This is a 3D mushroom farming website for our mushroom farming startup",
+        image: '/images/projects/mushroom.png',
+        tag: ["All", "React", "Tailwind CSS"],
+        gitUrl: 'https://github.com/KINYENJE/JHUB-Smart-Mushroom-Farming',
+        previewUrl: 'https://jhub-smart-mushroom-farming.vercel.app/',
+    }
 ]
 
 const ProjectSection = () => {
